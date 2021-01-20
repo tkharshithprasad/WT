@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pr{
+            font-family: serif;
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="pr">Problem statement</h2>
+    <p>Write a Javascript code that display text "Text-growing" with increasing <br>
+        font size in the interval of 100ms in RED COLOR when the font size reaches 50pt it display "TEXT SHRINKING" in BLUE COLOR. 
+        Then the font size decreases to 5pt.
+    </p>
+    <p id="myP1">TEXT GROWING</p>
+    <p id="myP2">TEXT SHRINKING</p>
+</body>
+<script>
+    var size=10;
+    var i=0;
+    var myWait1=setInterval(GrowText1,100);
+
+    function GrowText1()
+    {
+        if(size<51)
+        {
+            size=size+1;
+            document.getElementById("myP1").style.fontSize=(size+"pt");
+            document.getElementById("myP1").style.color="red";
+            document.getElementById("myP2").style.visibility="hidden";
+        }
+        else{
+            document.getElementById("myP2").style.visibility="hidden";
+
+            clearInterval(myWait1);
+            myWait1=setInterval(ShrinkText1,100);
+
+            document.getElementById("myP1").style.visibility="hidden";
+            document.getElementById("myP1").style.visibility="1pt";
+            document.getElementById("myP2").style.visibility="visible";
+        }
+    }
+    function ShrinkText1()
+    {
+        if(size>5)
+        {
+            size=size-1;
+            document.getElementById("myP2").style.fontSize=(size+"pt");
+            document.getElementById("myP2").style.color="blue";
+        }
+        else{
+            clearInterval(myWait1);
+        }
+    }
+</script>
+</html>

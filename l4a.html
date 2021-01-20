@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function vow(st){
+            var pos;
+            pos=st.search(/[aeiouAEIOU]/);
+            if(pos<0){
+                alert("pattern not found\n");
+            }
+            else{
+                alert("position of the left most vowel is "+(pos+1));
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 style="color: blue">Problem Statement</h2>
+    <p>Develop and demonstrate a HTML5 file that includes javascript that 
+        uses function for the following prblem:</p>
+        <ol><li> Parameter : A String</li>
+        <li>Output : The position in the string of the left most vowel</li>
+        <li> Parameter : A number</li>
+        <li>Output : The number with its digits in the reverse order</li></ol>
+
+        <p>
+            <form action="">
+                <p>Enter the text</p>
+                <input type="text" id="vowelText">
+                <input type="button" value="Click Here" onclick="vow(vowelText.value);">
+            </form>
+        </p>
+</body>
+</html>

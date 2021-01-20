@@ -1,0 +1,46 @@
+<?php 
+global $res;
+    if(isset($_POST['sub']))
+    {
+        $txt1=$_POST['n1'];
+        $txt2=$_POST['n2'];
+        $oprnd=$_POST['sub'];
+        if($oprnd=="+")
+        {
+            $res=$txt1+$txt2;
+        }
+        else if($oprnd=="-")
+        {
+            $res=$txt1-$txt2;
+        }
+        else if($oprnd=="*")
+        {
+            $res=$txt1*$txt2;
+        }
+        else if($oprnd=="/")
+        {
+            $res=$txt1/$txt2;
+        }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="">Calculator
+    <br><br><br>
+    No.1 <input name="n1" value="">
+    No.2 <input name="n2" value="">
+   
+    <input type="submit" name="sub" value="+">
+    <input type="submit" name="sub" value="-">
+    <input type="submit" name="sub" value="*">
+    <input type="submit" name="sub" value="/">
+    Res <input name="res" value="<?php echo $res; ?>">
+    </form>
+</body>
+</html>
