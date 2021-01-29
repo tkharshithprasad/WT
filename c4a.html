@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title> VOWEL </title>
+	<script>
+
+		function vow()
+		{
+			var st =prompt("Enter text","");
+			var pos =0;
+			pos=st.search(/[aeiouAEIOU]/);
+			if(st==' ')
+				alert("ENTER TEXT");
+			else if(pos<0)
+				alert("PATTERN NOT FOUND..!!");
+			else
+				alert("POSITION OF LEFT MOST VOWEL IS: "+(pos+1));
+		}
+
+	</script>
+</head>
+<body>	
+		<input type="button" name="" value="CLICK-HERE" onclick="vow()">
+</body>
+</html>

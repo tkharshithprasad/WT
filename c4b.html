@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title>REVERSE</title>
+	
+	<script>
+		function rev()
+		{
+			var n=prompt("Enter Number","");
+			n=parseInt(n);
+			var temp=0,rev=0;
+			while(n>0)
+			{
+				temp=n%10;
+				rev=rev*10+temp;
+				n=n/10;
+				n=parseInt(n);
+			}
+			alert("The reverse number is :"+rev);
+		}
+	</script>
+</head>
+<body>
+
+		<input type="button" value="CLICK-HERE" onclick="rev()">
+
+</body>
+</html>
