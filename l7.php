@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="1"/>
+    <!--<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <title>Digital Clock</title>
     <script type="text/javascript">
     function startTime(){
@@ -22,7 +21,7 @@
     }
     </style>
 </head>
-<body bgcolor="#950" text="white" onload="startTime()">
+<body bgcolor="#000080" text="white" onload="startTime()">
 <br>
 <h1 align="center">The time from the local system is:
 <span id="txt"></span>
@@ -31,7 +30,7 @@
 
 <?php $today=date("H:m:s"); ?>
 <br>
-<h1 align="center"><?php echo "The time from the server is:".date("h:i:sa");?>
+<h1 align="center"><?php echo "The time from the server is:",date("h:i:sa");?>
     <br></h1>
 
     </body>
